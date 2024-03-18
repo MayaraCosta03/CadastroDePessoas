@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Cadastro De Pessoa</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel header="Cadastro de Pessoa">
+            <h:panelGrid columns="2">
+                <h:outputLabel for="nome" value="Nome:"/>
+                <p:inputText id="nome" value="#{cadastroPessoaBean.pessoa.nome}" required="true"/>
+
+                <h:outputLabel for="idade" value="Idade:"/>
+                <p:inputText id="idade" value="#{cadastroPessoaBean.pessoa.idade}" required="true"/>
+
+                <h:outputLabel for="email" value="E-mail:"/>
+                <p:inputText id="email" value="#{cadastroPessoaBean.pessoa.email}" required="true"/>
+
+                <p:commandButton value="Salvar" action="#{cadastroPessoaBean.salvarPessoa}" ajax="false"/>
+            </h:panelGrid>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
